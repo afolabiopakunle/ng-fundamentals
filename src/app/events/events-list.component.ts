@@ -4,6 +4,7 @@ import { Component } from "@angular/core";
     selector: 'events-list',
     template: `
             <div>
+                <event-navbar></event-navbar>
             <h1>Upcoming Angular Events</h1>
         <hr/>
         <event-thumbnail [event]='event1' (eventClick)="eventClicked($event)"></event-thumbnail>
