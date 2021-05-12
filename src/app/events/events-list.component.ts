@@ -6,7 +6,6 @@ import { EventService } from "./shared/event.service";
     selector: 'events-list',
     template: `
             <div>
-                <event-navbar></event-navbar>
             <h1>Upcoming Angular Events</h1>
         <hr/>
         <div class="row">
