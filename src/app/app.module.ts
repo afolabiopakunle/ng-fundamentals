@@ -8,6 +8,7 @@ import { NavbarComponent } from './nav/navbar.component';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CreateEventComponent } from './events/event-create.component';
+import { e404Component } from './events/404.component';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import { CreateEventComponent } from './events/event-create.component';
     EventThumbnailComponent,
     NavbarComponent,
     EventDetailsComponent,
-    CreateEventComponent
+    CreateEventComponent,
+    e404Component
   ],
   bootstrap: [EventsAppComponent]
 })
