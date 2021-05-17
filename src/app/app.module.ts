@@ -25,7 +25,11 @@ import { EventGuard } from './events/event-guard';
     CreateEventComponent,
     e404Component
   ],
-  providers: [EventGuard],
+  providers: [EventGuard, {provide: 'canDeactivateNewEvent', useValue: routerDeactivateBlocker}],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
+
+export function routerDeactivateBlocker() {
+  return false;
+}

@@ -8,7 +8,7 @@ import { EventsListComponent } from "./events/events-list.component";
 
 const appRoutes: Routes = [
     {path: 'events', component: EventsListComponent },
-    {path: 'events/new', component: CreateEventComponent},
+    {path: 'events/new', component: CreateEventComponent, canDeactivate: ['canDeactivateNewEvent']},
     {path: 'events/:id', component: EventDetailsComponent, canActivate: [EventGuard] },
     {path: '', redirectTo: '/events', pathMatch: 'full' },
     {path: '404', component: e404Component}
