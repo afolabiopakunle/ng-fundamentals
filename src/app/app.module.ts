@@ -10,13 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { CreateEventComponent } from './events/event-create.component';
 import { e404Component } from './events/404.component';
 import { EventGuard } from './events/event-guard';
-import { EventsResolveService } from './events/shared/events-resolve.service';
 import { UserLoginComponent } from './users/user-login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   declarations: [
     EventsAppComponent,
@@ -28,7 +29,7 @@ import { UserLoginComponent } from './users/user-login.component';
     e404Component,
     UserLoginComponent
   ],
-  providers: [EventGuard, {provide: 'canDeactivateNewEvent', useValue: routerDeactivateBlocker}, EventsResolveService],
+  providers: [EventGuard, {provide: 'canDeactivateNewEvent', useValue: routerDeactivateBlocker}, ],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
