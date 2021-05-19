@@ -12,6 +12,7 @@ import { e404Component } from './events/404.component';
 import { EventGuard } from './events/event-guard';
 import { UserLoginComponent } from './users/user-login.component';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from './users/auth.service';
 
 @NgModule({
     imports: [
@@ -29,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     e404Component,
     UserLoginComponent
   ],
-  providers: [EventGuard, {provide: 'canDeactivateNewEvent', useValue: routerDeactivateBlocker}, ],
+  providers: [EventGuard, {provide: 'canDeactivateNewEvent', useValue: routerDeactivateBlocker}, AuthService],
   bootstrap: [EventsAppComponent]
 })
 export class AppModule { }
