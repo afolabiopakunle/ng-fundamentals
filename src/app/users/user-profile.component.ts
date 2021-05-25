@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from './auth.service';
 
@@ -14,8 +14,8 @@ export class UserProfileComponent implements OnInit {
 
 
   constructor(private router: Router, private authService: AuthService) { }
-  firstName = new FormControl(this.authService.currentUser.firstName)
-  lastName = new FormControl(this.authService.currentUser.lastName)
+  firstName = new FormControl(this.authService.currentUser.firstName, Validators.required)
+  lastName = new FormControl(this.authService.currentUser.lastName, Validators.required)
   ngOnInit(): void {
     this.profileForm = new FormGroup({
       firstName: this.firstName,
