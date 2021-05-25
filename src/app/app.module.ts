@@ -14,6 +14,7 @@ import { UserLoginComponent } from './users/user-login.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from './users/auth.service';
 import { UserProfileComponent } from './users/user-profile.component';
+import { SessionsListComponent } from './events/event-details/sessions-list.component';
 
 @NgModule({
     imports: [
@@ -31,7 +32,8 @@ import { UserProfileComponent } from './users/user-profile.component';
     CreateEventComponent,
     e404Component,
     UserLoginComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    SessionsListComponent
   ],
   providers: [EventGuard, {provide: 'canDeactivateNewEvent', useValue: routerDeactivateBlocker}, AuthService],
   bootstrap: [EventsAppComponent]

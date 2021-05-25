@@ -20,12 +20,7 @@
           {{event?.location?.city}}, {{event?.location?.country}}
         </address>
       </div>
-      <div class="col-md-6">
-            <div *ngFor="let session of event?.sessions">
-                <h3>{{session.name}}</h3>
-                <p>Presenter: {{session.presenter}}</p>
-                </div>
-      </div>
+        <sessions-list [sessions]='event?.sessions'></sessions-list>
     </div>
   </div>
   
